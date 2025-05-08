@@ -1,0 +1,35 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Mont', sans-serif;
+  font-weight: 400;
+}
+
+.app {
+  width: 375px;
+  height: 667px;
+  margin: 0 auto;
+  background-color: #ffffff;
+  margin: auto;
+  padding: 0;
+  overflow: auto;
+}
+
+.drinks-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.drink-card {
+  border: 1px solid #ddd;
+  padding: 15px;
+  text-align: center;
+}
+
+.price {
+  font-size: 1.2em;
+  font-weight: bold;
+  margin: 10px 0;
+}

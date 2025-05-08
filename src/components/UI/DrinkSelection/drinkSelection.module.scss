@@ -1,0 +1,457 @@
+@font-face {
+    font-family: 'Mont';
+    src: url('/fonts/Mont-Regular.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Mont';
+    src: url('/fonts/Mont-Medium.woff2') format('woff2');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Mont';
+    src: url('/fonts/Mont-SemiBold.woff2') format('woff2');
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Mont';
+    src: url('/fonts/Mont-Bold.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+}
+
+.container {
+    width: 375px;
+    margin: 0 auto;
+    position: relative;
+    transition: background 0.3s ease;
+    font-family: 'Mont', sans-serif;
+
+    &[data-active="coffee"] {
+        background: linear-gradient(to bottom right, #efccb9, #ffe7db);
+    }
+
+    &[data-active="tea"] {
+        background: #C9EA94;
+    }
+
+    &[data-active="milkshake"] {
+        background: #F9ECD2;
+    }
+
+    &[data-active="sprajt"] {
+        background: #FFE665;
+    }
+}
+
+.wrapper {
+    width: 100%;
+    box-sizing: border-box;
+    transition: background 0.3s ease;
+
+    &[data-active="coffee"] {
+        background: #efccb9;
+    }
+
+    &[data-active="tea"] {
+        background: #C9EA94;
+    }
+
+    &[data-active="milkshake"] {
+        background: #F9ECD2;
+    }
+
+    &[data-active="sprajt"] {
+        background: #FFE665;
+    }
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    align-content: center;
+    height: 80px;
+    position: relative;
+    padding: 0 0.5rem;
+    transition: background 0.3s ease;
+
+    &[data-active="coffee"] {
+        background: #efccb9;
+    }
+
+    &[data-active="tea"] {
+        background: #C9EA94;
+    }
+
+    &[data-active="milkshake"] {
+        background: #F9ECD2;
+    }
+
+    &[data-active="sprajt"] {
+        background: #FFE665;
+    }
+
+    .vector {
+        position: absolute;
+        width: 150px;
+        z-index: 0;
+        right: 35px;
+        top: 0;
+        transition: opacity 0.3s ease;
+    }
+
+    .title {
+        font-size: 1.5rem;
+        font-weight: 400;
+        z-index: 1;
+        cursor: default;
+        // font-family: 'Mont', sans-serif;
+    }
+
+    .loginButton {
+        display: flex;
+        align-items: center;
+        background: white;
+        border-radius: 15px;
+        padding: 14px;
+        padding-left: 3rem;
+        border: none;
+        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+        position: relative;
+        margin-right: 0.5rem;
+        z-index: 1;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        overflow: hidden;
+
+        &::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: #f5d009;
+            transition: left 0.4s ease;
+            z-index: -1;
+        }
+
+        &:hover {
+            &::before {
+                left: 0;
+            }
+        }
+
+        span {
+            font-size: 0.6rem;
+            position: relative;
+            z-index: 2;
+        }
+    }
+
+    .phoneIcon {
+        background: #f5d009;
+        padding: 0.5rem;
+        border-radius: 15px;
+        margin-right: 0.5rem;
+        position: absolute;
+        left: 0px;
+        top: 0;
+    }
+
+    .phoneIcon svg {
+        width: 20px;
+        height: 20px;
+    }
+
+}
+
+.categories {
+    display: flex;
+    justify-content: space-between;
+    border-radius: 1rem 1rem 0 0;
+    width: 100%;
+    z-index: 1;
+    position: relative;
+    padding-bottom: 0;
+    background-color: #f3f3f3;
+    position: static;
+
+    &::after {
+        content: '';
+        position: absolute;
+        top: 192px;
+        left: 0;
+        width: 0;
+        height: 0;
+        border-left: 22px solid transparent;
+        border-right: 22px solid transparent;
+        border-top: 20px solid #e7e7e7;
+        z-index: 10;
+        pointer-events: none;
+        filter: drop-shadow(0 -10px 20px rgba(0, 0, 0, 0.08));
+        transition: left 0.3s ease;
+    }
+
+}
+
+
+.container[data-active="coffee"] .categories::after {
+    left: 8%;
+
+}
+
+.container[data-active="tea"] .categories::after {
+    left: 34%;
+
+}
+
+.container[data-active="milkshake"] .categories::after {
+    left: 58%;
+
+}
+
+.container[data-active="sprajt"] .categories::after {
+    left: 83%;
+}
+
+
+
+.categoryCard {
+    flex: 1;
+    width: auto;
+    background: #fafafa;
+    height: 160px;
+    padding: 0.75rem;
+    padding-bottom: 3rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    position: relative;
+    border-left: 0.5px solid #e7e7e7;
+    cursor: default;
+
+    &::before {
+        content: '';
+        position: absolute;
+        left: 50%;
+        top: 30%;
+        transform: translate(-50%, -50%);
+        width: 3.5rem;
+        height: 3.5rem;
+        border-radius: 9999px;
+        z-index: 0;
+        transition: all 0.3s ease;
+        opacity: 0;
+    }
+
+
+    .container[data-active="coffee"] &:first-child::before {
+        opacity: 1;
+        background: #efccb9;
+    }
+
+    .container[data-active="tea"] &:nth-child(2)::before {
+        opacity: 1;
+        background: #C9EA94;
+    }
+
+    .container[data-active="milkshake"] &:nth-child(3)::before {
+        opacity: 1;
+        background: #F9ECD2;
+    }
+
+    .container[data-active="sprajt"] &:nth-child(4)::before {
+        opacity: 1;
+        background: #FFE665;
+    }
+
+    &.inactive {
+        background: #f3f3f3;
+        cursor: pointer;
+
+        .categoryImage {
+            filter: grayscale(100%);
+            transition: filter 0.3s ease;
+        }
+
+        &:hover {
+            .categoryImage {
+                filter: grayscale(0%);
+            }
+        }
+    }
+
+    &:first-child {
+        border-radius: 1rem 0 0 0;
+    }
+
+    &:last-child {
+        border-radius: 0 1rem 0 0;
+    }
+}
+
+.categoryIcon {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.categoryImage {
+    width: 3rem;
+    height: 3rem;
+    transform: scale(1.5);
+    object-fit: contain;
+    margin-bottom: 0.5rem;
+    z-index: 1;
+}
+
+
+.categoryTitle {
+    font-size: 0.65rem;
+    font-weight: 300;
+    text-align: center;
+    color: #333;
+    margin-top: 0.7rem;
+    position: relative;
+    z-index: 1;
+    font-family: 'Mont', sans-serif;
+}
+
+.sectionTitleContainer {
+    background-color: #ffffff;
+    border-radius: 1rem 1rem 0 0;
+    padding: 30px 10px;
+    box-shadow: 0 -10px 20px rgba(0, 0, 0, 0.08);
+    margin-top: -3rem;
+    position: relative;
+    z-index: 1;
+}
+
+.sectionTitle {
+    position: relative;
+    margin-bottom: 1.5rem;
+    background-color: white;
+}
+
+.sectionTitleDecoration {
+    position: absolute;
+    left: -1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 3.5rem;
+    height: 3.5rem;
+    border-radius: 9999px;
+    transition: background 0.3s ease;
+
+    .container[data-active="coffee"] & {
+        background: #efccb9;
+    }
+
+    .container[data-active="tea"] & {
+        background: #C9EA94;
+    }
+
+    .container[data-active="milkshake"] & {
+        background: #F9ECD2;
+    }
+
+    .container[data-active="sprajt"] & {
+        background: #FFE665;
+    }
+}
+
+.sectionTitleText {
+    font-size: 2rem;
+    font-weight: 300;
+    position: relative;
+    z-index: 10;
+    cursor: default;
+    transition: opacity 0.3s ease;
+    font-family: 'Mont', sans-serif;
+}
+
+.drinksGrid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.5rem;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.drinkCard {
+    border-radius: 0.75rem;
+    border: 1px solid #e7e7e7;
+    padding: 0.75rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    width: 100%;
+    box-sizing: border-box;
+    cursor: pointer;
+    transition: all 0.3s ease;
+
+    &:hover {
+        border: 1px solid #f5d009;
+        ;
+    }
+}
+
+.doubleBadge {
+    position: absolute;
+    top: 0.5rem;
+    right: 1rem;
+    background: #f5d009;
+    border-radius: 9999px;
+    padding: 0.4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.drinkImage {
+    width: 5rem;
+    height: 5rem;
+    object-fit: contain;
+    margin-bottom: 0.5rem;
+}
+
+.drinkName {
+    font-size: 0.7rem;
+    font-weight: 400;
+    margin-bottom: 0.25rem;
+    text-align: center;
+    font-family: 'Mont', sans-serif;
+}
+
+.drinkPrice {
+    // font-size: 1rem;
+    font-weight: 700;
+    display: flex;
+    align-items: baseline;
+    gap: 0.2rem;
+    font-family: 'Mont', sans-serif;
+
+    .priceFrom {
+        font-size: 0.8rem;
+        font-weight: 400;
+    }
+
+    .currency {
+        font-weight: 600;
+        font-size: 1rem;
+
+    }
+}

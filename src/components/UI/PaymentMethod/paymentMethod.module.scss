@@ -1,0 +1,117 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+  position: relative;
+  padding: 0 0 2rem 0;
+
+  .icon {
+    width: 80px;
+    height: 80px;
+  }
+}
+
+.backButton {
+  margin: 2.5rem auto 1.5rem auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #fafafa;
+  border: 1px solid #d3d3d3;
+  border-radius: 24px;
+  width: 180px;
+  height: 90px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.backButton:hover {
+  background: #ececec;
+}
+
+.backButton .icon {
+  width: 48px;
+  height: 48px;
+  color: #bdbdbd;
+}
+
+.title {
+  font-size: 1.5rem;
+  font-weight: 300;
+  margin: 2rem 0;
+  text-align: center;
+}
+
+.buttonsContainer {
+  display: flex;
+  position: absolute;
+  bottom: 7rem;
+  flex-direction: row;
+  width: 95%;
+  margin: 0 1rem;
+  justify-content: center;
+  background-color: #f5f5f5;
+  border-radius: 18px;
+}
+
+.paymentButton {
+  flex: 1 1 0;
+  padding: 1.4rem 0;
+  font-size: 1rem;
+  border: none;
+  border-radius: 18px;
+  cursor: pointer;
+  transition: all 0.3s;
+  background-color: #f5f5f5;
+  color: #333;
+  font-weight: 300;
+}
+
+.paymentButton.selected,
+.paymentButton:active {
+  background-color: #FFD700;
+  color: #000;
+  box-shadow: 0 4px 12px rgba(255, 215, 0, 0.15);
+}
+
+.payButton {
+  width: 95%;
+  margin-top: 2rem;
+  padding: 0.7rem 0;
+  background-color: #FFD700;
+  color: #111;
+  border: none;
+  border-radius: 18px;
+  font-size: 1.5rem;
+  font-weight: 400;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.7rem;
+  transition: background 0.2s;
+  position: absolute;
+  left: 50%;
+  bottom: 1rem;
+  z-index: 100;
+  transform: translateX(-50%);
+
+  .payText {
+    margin-left: 1rem;
+    font-weight: 300;
+  }
+
+  .payAmount {
+    margin-right: 1rem;
+    font-size: 2rem;
+    font-weight: 600;
+  }
+}
+
+.payButton:disabled {
+  background: #f5f5f5;
+  color: #bbb;
+  cursor: not-allowed;
+}
