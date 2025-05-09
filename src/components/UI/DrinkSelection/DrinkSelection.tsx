@@ -1,4 +1,4 @@
-import styles from './DrinkSelection.module.scss'
+import styles from './drinkSelection.module.scss'
 import { useState } from 'react'
 import { Phone } from 'lucide-react'
 import { categories, drinks } from './data.ts'
