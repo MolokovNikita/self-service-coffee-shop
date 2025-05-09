@@ -14,7 +14,7 @@
 ## Демонстрация
 
 Вы можете посмотреть, как работает проект, по ссылке:  
-👉 [Открыть демо на Vercel](https://vercel.com/nikitas-projects-ad518613/self-service-coffee-shop-js1a](https://self-service-coffee-shop-js1a.vercel.app/))
+👉 [Открыть демо на Vercel](https://self-service-coffee-shop-js1a.vercel.app/)
 👉 [Открыть макет в Figma](https://www.figma.com/design/16HWJTBtUov3PkRYNR86M3/Coffee-Shop?node-id=0-1&p=f&t=3i3s6crZ24JQAQ9b-0)
 
 ## Запуск проекта
