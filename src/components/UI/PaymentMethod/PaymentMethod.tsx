@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import type { PaymentMethodType } from '../../../types/types'
-import styles from './PaymentMethod.module.scss'
+import styles from './paymentMethod.module.scss'
 import { ArrowLeft } from 'lucide-react'
 
 interface Props {
