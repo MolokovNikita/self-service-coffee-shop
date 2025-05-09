@@ -18,7 +18,7 @@ export const categories: Category[] = [
     { id: 'coffee', title: 'Кофе', name: 'Кофе', image: '/coffeeCategory.png' },
     { id: 'tea', title: 'Чай', name: 'Чай', image: '/teaCategory.png' },
     { id: 'milkshake', title: 'Милкшейк', name: 'Милкшейк', image: '/milkshakeCategory.png' },
-    { id: 'sprajt', title: 'Спрайт', name: 'Спрайт', image: '/sprajtCategory.png' }
+    { id: 'sprajt', title: 'Морсы и газ. напитки', name: 'Морсыи газ. напитки', image: '/sprajtCategory.png' }
 ];
 
 export const drinks: Drink[] = [

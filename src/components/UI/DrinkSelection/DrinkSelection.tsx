@@ -1,5 +1,3 @@
-'use client'
-
 import styles from './DrinkSelection.module.scss'
 import { useState } from 'react'
 import { Phone } from 'lucide-react'

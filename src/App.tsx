@@ -8,6 +8,7 @@ import type { Drink, PaymentMethodType } from './types/types'
 import StartScreen from './components/UI/StartScreen/StartScreen'
 import './App.css'
 
+
 const App: React.FC = () => {
   const [step, setStep] = useState<'select' | 'payment' | 'cash' | 'card' | 'vending'>('select')
   const [selectedDrink, setSelectedDrink] = useState<Drink | null>(null)
@@ -59,7 +60,9 @@ const App: React.FC = () => {
           {step === 'vending' && selectedDrink && (
             <Vending
               drink={selectedDrink}
-              onFinish={() => setStep('select')}
+              onFinish={() =>
+                setStep('select')
+              }
             />
           )}
         </>

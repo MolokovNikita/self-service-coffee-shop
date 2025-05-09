@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import type { Drink } from '../../../types/types'
 import emulator from '../../../emulator'
+import styles from './cashPayment.module.scss'
 
 interface Props {
     drink: Drink
@@ -30,13 +31,16 @@ const CashPayment: React.FC<Props> = ({ drink, onSuccess, onCancel }) => {
     }, [insertedAmount, drink.price, onSuccess])
 
     return (
-        <div className="cash-payment">
-            <h2>Оплата наличными</h2>
-            <div className="amount-info">
+        <div className={styles.cashPayment}>
+            <h2 className={styles.title}>Оплата наличными</h2>
+            <div className={styles.amountInfo}>
                 <p>Сумма к оплате: {drink.price} ₽</p>
                 <p>Внесено: {insertedAmount} ₽</p>
             </div>
-            <button onClick={onCancel} className="cancel-button">
+            <div className={styles.hint}>
+                Используйте клавиши ctr + 1, 2, 5, 0 для внесения денег
+            </div>
+            <button onClick={onCancel} className={styles.cancelButton}>
                 Отмена
             </button>
         </div>

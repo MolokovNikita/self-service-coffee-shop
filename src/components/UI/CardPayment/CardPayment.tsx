@@ -54,7 +54,8 @@ const CardPayment: React.FC<Props> = ({ drink, onSuccess, onCancel }) => {
                     </div>
                 )}
                 <div className={styles.hint}>
-                    Нажмите Y для успешной оплаты или N для отмены
+                    Используйте Ctrl+Enter для успеха<br />
+                    Ctrl+Escape для отмены
                 </div>
             </div>
             <button

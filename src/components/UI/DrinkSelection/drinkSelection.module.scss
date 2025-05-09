@@ -1,31 +1,3 @@
-@font-face {
-    font-family: 'Mont';
-    src: url('/fonts/Mont-Regular.woff2') format('woff2');
-    font-weight: 400;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'Mont';
-    src: url('/fonts/Mont-Medium.woff2') format('woff2');
-    font-weight: 500;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'Mont';
-    src: url('/fonts/Mont-SemiBold.woff2') format('woff2');
-    font-weight: 600;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'Mont';
-    src: url('/fonts/Mont-Bold.woff2') format('woff2');
-    font-weight: 700;
-    font-style: normal;
-}
-
 .container {
     width: 375px;
     margin: 0 auto;
@@ -108,11 +80,10 @@
     }
 
     .title {
-        font-size: 1.5rem;
-        font-weight: 400;
+        font-size: 1.2rem;
+        font-weight: 600;
         z-index: 1;
         cursor: default;
-        // font-family: 'Mont', sans-serif;
     }
 
     .loginButton {
@@ -239,6 +210,7 @@
     border-left: 0.5px solid #e7e7e7;
     cursor: default;
 
+
     &::before {
         content: '';
         position: absolute;
@@ -318,19 +290,18 @@
 
 .categoryTitle {
     font-size: 0.65rem;
-    font-weight: 300;
     text-align: center;
     color: #333;
     margin-top: 0.7rem;
     position: relative;
     z-index: 1;
-    font-family: 'Mont', sans-serif;
 }
 
 .sectionTitleContainer {
     background-color: #ffffff;
     border-radius: 1rem 1rem 0 0;
     padding: 30px 10px;
+    padding-bottom: 3rem;
     box-shadow: 0 -10px 20px rgba(0, 0, 0, 0.08);
     margin-top: -3rem;
     position: relative;
@@ -371,13 +342,11 @@
 }
 
 .sectionTitleText {
-    font-size: 2rem;
-    font-weight: 300;
+    font-size: 1.7rem;
     position: relative;
     z-index: 10;
     cursor: default;
     transition: opacity 0.3s ease;
-    font-family: 'Mont', sans-serif;
 }
 
 .drinksGrid {
@@ -392,6 +361,7 @@
     border-radius: 0.75rem;
     border: 1px solid #e7e7e7;
     padding: 0.75rem;
+    padding-bottom: 1.2rem;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -422,36 +392,35 @@
 }
 
 .drinkImage {
-    width: 5rem;
-    height: 5rem;
+    width: 5.3rem;
+    height: 5.3rem;
     object-fit: contain;
     margin-bottom: 0.5rem;
 }
 
 .drinkName {
-    font-size: 0.7rem;
-    font-weight: 400;
-    margin-bottom: 0.25rem;
+    font-size: 0.9rem;
+    margin-bottom: 0.1rem;
     text-align: center;
-    font-family: 'Mont', sans-serif;
+    padding-bottom: 1rem;
 }
 
 .drinkPrice {
-    // font-size: 1rem;
+    position: absolute;
+    bottom: 0.2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 1.2rem;
     font-weight: 700;
     display: flex;
     align-items: baseline;
     gap: 0.2rem;
-    font-family: 'Mont', sans-serif;
 
     .priceFrom {
-        font-size: 0.8rem;
-        font-weight: 400;
+        font-size: 1rem;
     }
 
     .currency {
-        font-weight: 600;
-        font-size: 1rem;
-
+        font-size: 1.2rem;
     }
 }

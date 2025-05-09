@@ -7,15 +7,15 @@ export interface Drink {
 }
 
 export type Emulator = {
-  StartCashin: (cb: (amount: number) => void) => void
-  StopCashin: () => void
+  StartCashin: (cb: (amount: number) => void) => void;
+  StopCashin: () => void;
   BankCardPurchase: (
     amount: number,
-    cb: (result: boolean) => void,
+    cb: (success: boolean) => void,
     display_cb: (message: string) => void
-  ) => void
-  BankCardCancel: () => void
-  Vend: (product_idx: number, cb: (result: boolean) => void) => void
-}
+  ) => void;
+  BankCardCancel: () => void;
+  Vend: (product_idx: number, cb: (success: boolean) => void) => void;
+};
 
 export type PaymentMethodType = 'cash' | 'card' | null

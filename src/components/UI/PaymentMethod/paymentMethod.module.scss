@@ -39,7 +39,6 @@
 
 .title {
   font-size: 1.5rem;
-  font-weight: 300;
   margin: 2rem 0;
   text-align: center;
 }
@@ -66,7 +65,6 @@
   transition: all 0.3s;
   background-color: #f5f5f5;
   color: #333;
-  font-weight: 300;
 }
 
 .paymentButton.selected,
@@ -84,8 +82,7 @@
   color: #111;
   border: none;
   border-radius: 18px;
-  font-size: 1.5rem;
-  font-weight: 400;
+  font-size: 1.2rem;
   cursor: pointer;
   display: flex;
   align-items: center;
@@ -99,14 +96,15 @@
   transform: translateX(-50%);
 
   .payText {
+    font-weight: 600;
+
     margin-left: 1rem;
-    font-weight: 300;
   }
 
   .payAmount {
     margin-right: 1rem;
     font-size: 2rem;
-    font-weight: 600;
+    font-weight: 700;
   }
 }
 
