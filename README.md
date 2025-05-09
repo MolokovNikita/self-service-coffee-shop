@@ -40,8 +40,8 @@ http://localhost:5173
 ## Структура проекта
 
 ```
-src/
-├── assets/              # Шрифты, изображения и стили
+├── assets/   # Шрифты, изображения
+src/           
 ├── components/          # UI-компоненты
 ├── emulator/            # Эмулятор оборудования
 ├── types/               # Типы TypeScript
