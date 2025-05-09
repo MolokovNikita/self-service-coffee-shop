@@ -1,4 +1,4 @@
-import styles from './DrinkSelection.module.scss'
+import styles from './drinkSelection.module.scss'
 
 interface Props {
   id: string
